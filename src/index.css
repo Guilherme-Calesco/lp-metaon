@@ -2,66 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '@fontsource/outfit/400.css';
-@import '@fontsource/outfit/500.css';
-@import '@fontsource/outfit/600.css';
-@import '@fontsource/outfit/700.css';
-
-/* Nexttrack Gamification Design System */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    /* Nexttrack Brand Colors */
-    --nexttrack-green: 152 76% 46%;
-    --nexttrack-green-light: 152 76% 92%;
-    --nexttrack-green-glow: 152 76% 56%;
-    --nexttrack-blue: 226 71% 40%;
-    --nexttrack-blue-light: 226 71% 95%;
-    --nexttrack-blue-dark: 226 71% 25%;
-    
-    /* Medal Colors */
-    --gold: 45 93% 47%;
-    --gold-light: 45 93% 80%;
-    --silver: 220 9% 66%;
-    --silver-light: 220 9% 88%;
-    --bronze: 30 60% 50%;
-    --bronze-light: 30 60% 80%;
-    
-    /* Warning/Danger */
-    --warning: 38 92% 50%;
-    --warning-light: 38 92% 95%;
-    --danger: 0 72% 51%;
-    --danger-light: 0 72% 95%;
-
-    --background: 226 71% 8%;
+    --background: 0 0% 4%;
     --foreground: 0 0% 98%;
 
-    --card: 226 71% 12%;
+    --card: 0 0% 7%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 226 71% 12%;
+    --popover: 0 0% 7%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 152 76% 46%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 142 76% 45%;
+    --primary-foreground: 0 0% 4%;
 
-    --secondary: 226 71% 40%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 226 50% 20%;
-    --muted-foreground: 226 20% 60%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 226 71% 25%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 142 76% 55%;
+    --accent-foreground: 0 0% 4%;
 
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 226 50% 20%;
-    --input: 226 50% 20%;
-    --ring: 152 76% 46%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 142 76% 45%;
 
     --radius: 0.75rem;
+
+    /* Custom design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(142 76% 45%), hsl(142 76% 35%));
+    --gradient-accent: linear-gradient(135deg, hsl(142 76% 55%), hsl(142 76% 40%));
+    --gradient-radial: radial-gradient(circle at 50% 50%, hsl(142 76% 45% / 0.15), transparent 70%);
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 4%) 0%, hsl(0 0% 2%) 100%);
+    
+    --glow-primary: 0 0 60px hsl(142 76% 45% / 0.4);
+    --glow-accent: 0 0 60px hsl(142 76% 55% / 0.3);
+    --glow-soft: 0 0 100px hsl(142 76% 45% / 0.2);
+
+    --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.5);
+    --shadow-elevated: 0 20px 60px -20px hsl(142 76% 45% / 0.2);
+
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 142 76% 45%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 142 76% 45%;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
   }
 }
 
@@ -70,37 +70,120 @@
     @apply border-border;
   }
 
-  html {
-    font-family: 'Outfit', system-ui, sans-serif;
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
   }
 
-  body {
-    @apply bg-background text-foreground antialiased overflow-hidden;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
   }
 }
 
 @layer utilities {
-  .podium-glow {
-    box-shadow: 0 0 60px -10px hsl(var(--nexttrack-green) / 0.5);
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
   }
-  
-  .gold-glow {
-    box-shadow: 0 0 30px -5px hsl(var(--gold) / 0.6);
+
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
   }
-  
-  .silver-glow {
-    box-shadow: 0 0 25px -5px hsl(var(--silver) / 0.5);
+
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
   }
-  
-  .bronze-glow {
-    box-shadow: 0 0 25px -5px hsl(var(--bronze) / 0.5);
+
+  .bg-gradient-accent {
+    background-image: var(--gradient-accent);
   }
-  
-  .stat-card {
-    @apply bg-card/80 backdrop-blur rounded-xl p-4 border border-border;
+
+  .bg-gradient-radial {
+    background-image: var(--gradient-radial);
   }
-  
-  .ranking-row {
-    @apply bg-card/60 backdrop-blur rounded-lg px-4 py-2 border border-border/50;
+
+  .bg-gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+
+  .glow-soft {
+    box-shadow: var(--glow-soft);
+  }
+
+  .glass {
+    @apply bg-card/50 backdrop-blur-xl border border-border/50;
+  }
+
+  .glass-strong {
+    @apply bg-card/80 backdrop-blur-2xl border border-border;
+  }
+}
+
+@layer components {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .animate-gradient {
+    animation: gradient-shift 8s ease infinite;
+    background-size: 200% 200%;
+  }
+
+  .animate-count {
+    animation: count-up 2s ease-out forwards;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: var(--glow-primary);
+  }
+  50% {
+    box-shadow: var(--glow-soft);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes count-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
