@@ -76,9 +76,11 @@ const PricingSection = () => {
             </div>
 
             {/* CTA Button */}
-            <Button variant="glow" size="xl" className="w-full text-lg">
-              Começar Agora
-              <ArrowRight className="ml-2 w-5 h-5" />
+            <Button variant="glow" size="xl" className="w-full text-lg" asChild>
+              <a href="https://www.metaon.caveltech.com.br" target="_blank" rel="noopener noreferrer">
+                Começar Agora
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
             </Button>
 
             {/* Guarantee */}

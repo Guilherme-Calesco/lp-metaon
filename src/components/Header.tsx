@@ -22,7 +22,7 @@ const Header = () => {
               <BarChart3 className="w-6 h-6 text-primary-foreground" />
             </div>
             <span className="text-xl font-bold font-display text-foreground">
-              [Nome do Produto]
+              MetaOn
             </span>
           </div>
 
@@ -52,11 +52,13 @@ const Header = () => {
             <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
               Entrar
             </Button>
-            <Button 
-              variant="hero" 
-              onClick={() => scrollToSection("precos")}
+            <Button
+              variant="hero"
+              asChild
             >
-              Começar Agora
+              <a href="https://www.metaon.caveltech.com.br" target="_blank" rel="noopener noreferrer">
+                Começar Agora
+              </a>
             </Button>
           </div>
 
@@ -95,8 +97,10 @@ const Header = () => {
                 <Button variant="ghost" className="justify-start">
                   Entrar
                 </Button>
-                <Button variant="hero" onClick={() => scrollToSection("precos")}>
-                  Começar Agora
+                <Button variant="hero" asChild>
+                  <a href="https://www.metaon.caveltech.com.br" target="_blank" rel="noopener noreferrer">
+                    Começar Agora
+                  </a>
                 </Button>
               </div>
             </div>
