@@ -11,26 +11,23 @@ const Footer = () => {
               <BarChart3 className="w-6 h-6 text-primary-foreground" />
             </div>
             <span className="text-xl font-bold font-display text-foreground">
-              [Nome do Produto]
+              MetaOn
             </span>
           </div>
 
           {/* Links */}
           <div className="flex items-center gap-8 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-colors">
-              Termos de Uso
+            <a href="https://metaon.caveltech.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              Acessar Plataforma
             </a>
-            <a href="#" className="hover:text-primary transition-colors">
-              Privacidade
-            </a>
-            <a href="#" className="hover:text-primary transition-colors">
+            <a href="mailto:suporte@caveltech.com.br" className="hover:text-primary transition-colors">
               Suporte
             </a>
           </div>
 
           {/* Copyright */}
           <div className="text-sm text-muted-foreground">
-            © 2024 [Nome do Produto]. Todos os direitos reservados.
+            2025 MetaOn by Caveltech. Todos os direitos reservados.
           </div>
         </div>
       </div>

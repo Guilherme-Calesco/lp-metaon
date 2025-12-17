@@ -49,15 +49,17 @@ const Header = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
-              Entrar
+            <Button variant="ghost" className="text-muted-foreground hover:text-foreground" asChild>
+              <a href="https://metaon.caveltech.com.br" target="_blank" rel="noopener noreferrer">
+                Entrar
+              </a>
             </Button>
             <Button
               variant="hero"
               asChild
             >
-              <a href="https://www.metaon.caveltech.com.br" target="_blank" rel="noopener noreferrer">
-                Começar Agora
+              <a href="https://metaon.caveltech.com.br" target="_blank" rel="noopener noreferrer">
+                Comecar Agora
               </a>
             </Button>
           </div>
@@ -94,12 +96,14 @@ const Header = () => {
                 Preços
               </button>
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
-                <Button variant="ghost" className="justify-start">
-                  Entrar
+                <Button variant="ghost" className="justify-start" asChild>
+                  <a href="https://metaon.caveltech.com.br" target="_blank" rel="noopener noreferrer">
+                    Entrar
+                  </a>
                 </Button>
                 <Button variant="hero" asChild>
-                  <a href="https://www.metaon.caveltech.com.br" target="_blank" rel="noopener noreferrer">
-                    Começar Agora
+                  <a href="https://metaon.caveltech.com.br" target="_blank" rel="noopener noreferrer">
+                    Comecar Agora
                   </a>
                 </Button>
               </div>

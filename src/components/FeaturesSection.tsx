@@ -1,79 +1,82 @@
-import { 
-  BarChart3, 
-  Users, 
-  Target, 
-  TrendingUp, 
-  Zap, 
-  Shield,
+import {
+  BarChart3,
+  Users,
+  Target,
+  TrendingUp,
+  Zap,
   Layers,
   RefreshCw,
   UserPlus,
   Trophy,
   Phone,
   CreditCard,
-  Calendar
+  Palette,
+  FileSpreadsheet,
+  PartyPopper,
+  LayoutGrid,
+  Eye
 } from "lucide-react";
 
 const features = [
   {
     icon: Trophy,
-    title: "Ranking de Vendas Visual",
-    description: "Veja o pódio completo com seus top vendedores. Posições 1º, 2º, 3º com medalhas e destaque visual para motivar a competição saudável."
+    title: "Ranking com Podio Visual",
+    description: "Veja o podio completo com medalhas de ouro, prata e bronze. 5 estilos de visualizacao: Podio, Leaderboard, Tabela, Cards e Lista."
   },
   {
     icon: BarChart3,
-    title: "Métricas em Tempo Real",
-    description: "Vendas totais, valor de vendas, valor de entrada, tudo atualizado automaticamente. Acompanhe o desempenho do mês inteiro em segundos."
+    title: "Metricas em Tempo Real",
+    description: "Vendas totais, valor de vendas, valor de entrada, tudo atualizado automaticamente a cada 30 segundos. Acompanhe o desempenho do mes inteiro."
   },
   {
     icon: TrendingUp,
-    title: "Taxa de Conversão Detalhada",
-    description: "Monitore conversão geral, de calls e de leads separadamente. Identifique qual canal traz mais resultados para cada vendedor."
+    title: "Taxa de Conversao Detalhada",
+    description: "Monitore conversao geral, de calls e de leads separadamente. Identifique qual canal traz mais resultados para cada vendedor."
   },
   {
     icon: Phone,
     title: "Controle de Calls e Leads",
-    description: "Registre calls e leads diários por vendedor. Veja o total do mês e acompanhe a evolução dia a dia no painel de controle."
+    description: "Registre calls e leads diarios por vendedor. Veja o total do mes e acompanhe a evolucao dia a dia no painel de controle."
   },
   {
     icon: Layers,
-    title: "Criação de Squads",
-    description: "Organize vendedores em equipes e acompanhe o desempenho coletivo. Crie competições entre squads e motive o trabalho em equipe."
+    title: "Gestao de Squads",
+    description: "Organize vendedores em equipes com cores personalizadas. Veja o ranking por squad e motive a competicao entre times."
   },
   {
     icon: CreditCard,
     title: "Formas de Pagamento",
-    description: "Registre vendas com PIX, Cartão de Crédito, Débito, Boleto, Dinheiro ou Transferência. Veja a porcentagem de cada forma por vendedor."
+    description: "Registre vendas com PIX, Cartao de Credito, Debito, Boleto, Dinheiro ou Transferencia. Controle completo de cada venda."
   },
   {
     icon: Target,
-    title: "Metas do Mês Visuais",
+    title: "Metas com Barras de Progresso",
     description: "Defina metas de entrada, vendas, calls e leads. Barras de progresso mostram exatamente quanto falta para bater cada objetivo."
   },
   {
-    icon: Calendar,
-    title: "Histórico Completo de Vendas",
-    description: "Todas as vendas individuais registradas com data, vendedor, valor, tipo (call/lead) e pagamento. Filtre e encontre qualquer venda rapidamente."
+    icon: PartyPopper,
+    title: "Celebracoes Automaticas",
+    description: "Quando uma venda e registrada, o sistema dispara confetes e animacoes para celebrar a conquista com todo o time."
+  },
+  {
+    icon: Palette,
+    title: "Personalizacao Total",
+    description: "Customize cores, logo, favicon e nome da empresa. Deixe o dashboard com a cara da sua marca em poucos cliques."
+  },
+  {
+    icon: FileSpreadsheet,
+    title: "Exportacao de Relatorios",
+    description: "Exporte ranking, vendas e dados diarios em CSV. Relatorios prontos para analise em Excel ou Google Sheets."
   },
   {
     icon: UserPlus,
-    title: "Gestão de Vendedores",
-    description: "Adicione vendedores com foto, cargo e squad. Edite ou remova a qualquer momento. Sem limite de cadastros na plataforma."
+    title: "Usuarios Ilimitados",
+    description: "Adicione quantos gestores e vendedores precisar. Cada um acessa seu painel e registra suas proprias vendas."
   },
   {
-    icon: RefreshCw,
-    title: "Preenchimento Automático",
-    description: "Seu time registra vendas de forma rápida e simples. Menos trabalho manual, mais tempo focado em fechar negócios."
-  },
-  {
-    icon: Users,
-    title: "Multiusuários Ilimitados",
-    description: "Adicione quantos gestores e vendedores precisar. Cada um acessa seu painel e registra suas próprias vendas."
-  },
-  {
-    icon: Shield,
-    title: "Simples e Intuitivo",
-    description: "Interface pensada para o dia a dia corrido. Seu time aprende a usar em minutos com abas claras: Dados, Vendas, Vendedores, Squads, Metas."
+    icon: Eye,
+    title: "Modo Demo para Testar",
+    description: "Experimente todas as funcionalidades sem cadastro. Teste o sistema antes de assinar e veja como funciona na pratica."
   }
 ];
 
@@ -82,19 +85,19 @@ const FeaturesSection = () => {
     <section id="funcionalidades" className="py-24 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-radial opacity-30" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-2 rounded-full glass text-primary text-sm font-medium mb-6">
             Funcionalidades Completas
           </span>
           <h2 className="text-3xl md:text-5xl font-bold font-display mb-6 text-foreground">
-            Tudo que Você Precisa para{" "}
-            <span className="text-gradient">Controlar Vendas Visualmente</span>
+            Tudo que Voce Precisa para{" "}
+            <span className="text-gradient">Motivar Seu Time de Vendas</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Dashboard completo com ranking, métricas, metas e gestão de equipe. 
-            Uma ferramenta simples que transforma dados em motivação.
+            Dashboard completo com ranking visual, metricas, metas e gamificacao.
+            Transforme dados em motivacao e veja seu time bater recordes.
           </p>
         </div>
 
