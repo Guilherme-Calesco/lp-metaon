@@ -20,7 +20,7 @@ const Footer = () => {
             <a href="https://metaon.caveltech.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
               Acessar Plataforma
             </a>
-            <a href="mailto:suporte@caveltech.com.br" className="hover:text-primary transition-colors">
+            <a href="https://wa.me/5514991820558?text=Olá! Preciso de suporte com o MetaOn." target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
               Suporte
             </a>
           </div>
