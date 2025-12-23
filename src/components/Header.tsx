@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { BarChart3, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const Header = () => {
@@ -17,13 +17,8 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 glass-strong">
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center glow-primary">
-              <BarChart3 className="w-6 h-6 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-bold font-display text-foreground">
-              MetaOn
-            </span>
+          <div className="flex items-center">
+            <img src="/logo.png" alt="MetaOn" className="h-10" />
           </div>
 
           {/* Desktop Navigation */}
