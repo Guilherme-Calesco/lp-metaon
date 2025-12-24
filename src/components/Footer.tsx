@@ -1,4 +1,5 @@
 import { BarChart3 } from "lucide-react";
+import { buildDashboardURLWithUTM } from "@/utils/utm";
 
 const Footer = () => {
   return (
@@ -17,7 +18,7 @@ const Footer = () => {
 
           {/* Links */}
           <div className="flex items-center gap-8 text-sm text-muted-foreground">
-            <a href="https://metaon.caveltech.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+            <a href={buildDashboardURLWithUTM("https://metaon.caveltech.com.br")} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
               Acessar Plataforma
             </a>
             <a href="https://wa.me/5514991820558?text=Olá! Preciso de suporte com o MetaOn." target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">

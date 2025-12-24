@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { buildDashboardURLWithUTM } from "@/utils/utm";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const getDashboardURL = () => buildDashboardURLWithUTM("https://metaon.caveltech.com.br");
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -45,7 +48,7 @@ const Header = () => {
 
           <div className="hidden md:flex items-center gap-4">
             <Button variant="ghost" className="text-muted-foreground hover:text-foreground" asChild>
-              <a href="https://metaon.caveltech.com.br" target="_blank" rel="noopener noreferrer">
+              <a href={getDashboardURL()} target="_blank" rel="noopener noreferrer">
                 Entrar
               </a>
             </Button>
@@ -53,7 +56,7 @@ const Header = () => {
               variant="hero"
               asChild
             >
-              <a href="https://metaon.caveltech.com.br" target="_blank" rel="noopener noreferrer">
+              <a href={getDashboardURL()} target="_blank" rel="noopener noreferrer">
                 Comecar Agora
               </a>
             </Button>
@@ -92,12 +95,12 @@ const Header = () => {
               </button>
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
                 <Button variant="ghost" className="justify-start" asChild>
-                  <a href="https://metaon.caveltech.com.br" target="_blank" rel="noopener noreferrer">
+                  <a href={getDashboardURL()} target="_blank" rel="noopener noreferrer">
                     Entrar
                   </a>
                 </Button>
                 <Button variant="hero" asChild>
-                  <a href="https://metaon.caveltech.com.br" target="_blank" rel="noopener noreferrer">
+                  <a href={getDashboardURL()} target="_blank" rel="noopener noreferrer">
                     Comecar Agora
                   </a>
                 </Button>

@@ -12,6 +12,7 @@ import {
   FileSpreadsheet,
   PartyPopper
 } from "lucide-react";
+import { buildDashboardURLWithUTM } from "@/utils/utm";
 
 const features = [
   { icon: Users, text: "Vendedores e usuarios ilimitados" },
@@ -80,7 +81,7 @@ const PricingSection = () => {
 
             {/* CTA Button */}
             <Button variant="glow" size="xl" className="w-full text-lg" asChild>
-              <a href="https://metaon.caveltech.com.br" target="_blank" rel="noopener noreferrer">
+              <a href={buildDashboardURLWithUTM("https://metaon.caveltech.com.br")} target="_blank" rel="noopener noreferrer">
                 Comecar Agora
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
